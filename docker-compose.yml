@@ -1,0 +1,71 @@
+version: '3'
+services:
+  damn-api-gateway:
+    build: ./damn-api-gateway
+    container_name: damn-api-gateway
+    restart: always
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./application.properties:/app/application.properties
+    networks:
+      - damn-network
+
+  damn-data-manager:
+    build: ./damn-data-manager
+    container_name: damn-data-manager
+    restart: always
+    ports:
+      - "8084:8084"
+    volumes:
+      - ./application.properties:/app/application.properties
+    networks:
+      - damn-network
+
+  damn-map-service:
+    build: ./damn-map-service
+    container_name: damn-map-service
+    restart: always
+    ports:
+      - "8082:8082"
+    volumes:
+      - ./application.properties:/app/application.properties
+    networks:
+      - damn-network
+
+  damn-route-manager:
+    build: ./damn-route-manager
+    container_name: damn-route-manager
+    restart: always
+    ports:
+      - "8081:8081"
+    volumes:
+      - ./application.properties:/app/application.properties
+    networks:
+      - damn-network
+
+  damn-route-provider:
+    build: ./damn-route-provider
+    container_name: damn-route-provider
+    restart: always
+    ports:
+      - "8083:8083"
+    volumes:
+      - ./application.properties:/app/application.properties
+    networks:
+      - damn-network
+
+  damn-route-scorer:
+    build: ./damn-route-scorer
+    container_name: damn-route-scorer
+    restart: always
+    ports:
+      - "8085:8085"
+    volumes:
+      - ./application.properties:/app/application.properties
+    networks:
+      - damn-network
+
+networks:
+  damn-network:
+    driver: bridge

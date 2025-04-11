@@ -1,0 +1,66 @@
+INSERT INTO public.luas_route (from_station_id,to_station_id) VALUES
+                                                                  ('LG01','LG02'),
+                                                                  ('LG02','LG03'),
+                                                                  ('LG03','LG04'),
+                                                                  ('LG04','LG05'),
+                                                                  ('LG05','LG06'),
+                                                                  ('LG06','LG07'),
+                                                                  ('LG07','LG10'),
+                                                                  ('LG10','LG12'),
+                                                                  ('LG12','LG13'),
+                                                                  ('LG13','LG14');
+INSERT INTO public.luas_route (from_station_id,to_station_id) VALUES
+                                                                  ('LG14','LG15'),
+                                                                  ('LG15','LG16'),
+                                                                  ('LG16','LG17'),
+                                                                  ('LG17','LG18'),
+                                                                  ('LG18','LG19'),
+                                                                  ('LG19','LG20'),
+                                                                  ('LG20','LG21'),
+                                                                  ('LG21','LG22'),
+                                                                  ('LG22','LG23'),
+                                                                  ('LG23','LG24');
+INSERT INTO public.luas_route (from_station_id,to_station_id) VALUES
+                                                                  ('LG24','LG25'),
+                                                                  ('LG25','LG26'),
+                                                                  ('LG26','LG27'),
+                                                                  ('LG27','LG28'),
+                                                                  ('LG28','LG29'),
+                                                                  ('LG29','LG30'),
+                                                                  ('LG30','LG31'),
+                                                                  ('LG31','LG32'),
+                                                                  ('LG32','LG33'),
+                                                                  ('LG02','LG01');
+INSERT INTO public.luas_route (from_station_id,to_station_id) VALUES
+                                                                  ('LG03','LG02'),
+                                                                  ('LG04','LG03'),
+                                                                  ('LG05','LG04'),
+                                                                  ('LG06','LG05'),
+                                                                  ('LG08','LG06'),
+                                                                  ('LG34','LG06'),
+                                                                  ('LG11','LG34'),
+                                                                  ('LG12','LG11'),
+                                                                  ('LG13','LG12'),
+                                                                  ('LG14','LG13');
+INSERT INTO public.luas_route (from_station_id,to_station_id) VALUES
+                                                                  ('LG15','LG14'),
+                                                                  ('LG16','LG15'),
+                                                                  ('LG17','LG16'),
+                                                                  ('LG18','LG17'),
+                                                                  ('LG19','LG18'),
+                                                                  ('LG20','LG19'),
+                                                                  ('LG21','LG20'),
+                                                                  ('LG23','LG22'),
+                                                                  ('LG24','LG23'),
+                                                                  ('LG25','LG24');
+INSERT INTO public.luas_route (from_station_id,to_station_id) VALUES
+                                                                  ('LG26','LG25'),
+                                                                  ('LG27','LG26'),
+                                                                  ('LG28','LG27'),
+                                                                  ('LG29','LG28'),
+                                                                  ('LG30','LG29'),
+                                                                  ('LG31','LG30'),
+                                                                  ('LG32','LG31'),
+                                                                  ('LG33','LG32'),
+                                                                  ('LG22','LG35'),
+                                                                  ('LG35','LG21');

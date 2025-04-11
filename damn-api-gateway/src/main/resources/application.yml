@@ -1,0 +1,42 @@
+damn:
+  host: ${DAMN_HOST:host.docker.internal}
+server:
+  port: 8080
+spring:
+  application:
+    name: damn-api-gateway
+  main:
+    web-application-type: reactive
+  cloud:
+    gateway:
+      routes:
+        - id: routes-manager
+          uri: http://${damn.host}:8081
+          predicates:
+            - Path=/api/routes-manager/**
+          filters:
+            - name: LoggingFilter
+        - id: map-service
+          uri: http://${damn.host}:8082
+          predicates:
+            - Path=/api/map-service/**
+          filters:
+            - name: LoggingFilter
+        - id: routes-provider
+          uri: http://${damn.host}:8083
+          predicates:
+            - Path=/api/routes-provider/**
+          filters:
+            - name: LoggingFilter
+        - id: data-manager
+          uri: http://${damn.host}:8084
+          predicates:
+            - Path=/api/data-manager/**
+          filters:
+            - name: LoggingFilter
+        - id: routes-scorer
+          uri: http://${damn.host}:8085
+          predicates:
+            - Path=/api/routes-scorer/**
+          filters:
+            - name: LoggingFilter

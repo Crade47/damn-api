@@ -1,0 +1,53 @@
+{
+	"info": {
+		"_postman_id": "f07341f2-4437-4d18-8831-cb17a4ea1de1",
+		"name": "DAMN",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "15525289"
+	},
+	"item": [
+		{
+			"name": "GET Location Demo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/locations?name=Abhi",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"locations"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Abhi"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Location Demo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Abhi Now\",\r\n    \"address\": \"123 New St, Sample City, SC\",\r\n    \"latitude\": 35.6895,\r\n    \"longitude\": 139.6917,\r\n    \"description\": \"A new location added for testing.\",\r\n    \"phoneNumber\": \"+1 123-456-7890\",\r\n    \"website\": \"https://example.com/newlocation\",\r\n    \"rating\": 4.2,\r\n    \"openingHours\": \"9:00 AM - 5:00 PM\",\r\n    \"imageUrl\": \"https://example.com/images/new_location.jpg\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/locations"
+			},
+			"response": []
+		}
+	]
+}
